@@ -17,5 +17,6 @@ def add_inputs():
     y = int(request.form['y'] or 0)
     result = add.delay(x, y)
     flash("Your addition job has been submitted.")
-    flash(f"result is : {result.id}")
+    # flash(f"result is : {result.id}")
+    flash(f"result is : {result}")
     return redirect('/')
